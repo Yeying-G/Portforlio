@@ -1,0 +1,44 @@
+<!doctype html> <!-- 文档类型：固定写法 -->
+<html lang="en"> <!-- 页面语言：改成 zh-CN 也行 -->
+<head> <!-- 头部信息开始 -->
+  <meta charset="utf-8" /> <!-- 字符编码：保持 UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- 移动端自适应 -->
+  <title>Yeying Guo — Portfolio</title> <!-- 页面标题（改这里显示在浏览器标签上） -->
+  <link rel="stylesheet" href="./styles.css" /> <!-- 站点样式文件路径（如改名要同步改这里） -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script> <!-- Vue 3（CDN，保持不变） -->
+  <script src="https://unpkg.com/vue-router@4/dist/vue-router.global.prod.js"></script> <!-- Vue Router 4（CDN） -->
+</head> <!-- 头部信息结束 -->
+<body> <!-- 页面主体开始 -->
+
+  <header class="site-header"> <!-- 顶部导航条容器（样式在 styles.css 里改） -->
+    <div class="container header-inner"> <!-- 居中布局 + 内部横向分布 -->
+      <div class="brand"> <!-- 左侧品牌区（头像 + 名字） -->
+        <img src="https://i.postimg.cc/bvW74McP/image.jpg" class="avatar" alt="Headshot" /> <!-- 头像路径（改图就换这里） -->
+        <div> <!-- 名称与副标题容器 -->
+          <h1 class="title">Yeying Guo</h1> <!-- 你的名字（改这里） -->
+          <p class="tagline">M.A. in Educational Technology|HR & Communications| </p>
+          <p class="tagline"> UX Research| Content Strategy| Bilingual EN/中文</p> <!-- 你的标签/方向（改这里） -->
+        </div> <!-- 名称与副标题容器结束 -->
+      </div> <!-- 左侧品牌区结束 -->
+
+      <nav class="nav"> <!-- 右侧导航链接（想加项就在这儿加） -->
+        <a href="#/">Home</a> <!-- 首页路由（保持 #/） -->
+        <a href="#/graduation-ip">Graduation IP</a> <!-- 毕业 IP 子页路由 -->
+        <a href="#/game-design">Game Design</a> <!-- 游戏设计 子页路由 -->
+        <a class="btn" href="https://drive.google.com/file/d/1qBRDO_uugdz9cKQbBFCOU1n7WdG9JG5m/view?usp=sharing" target="_blank" rel="noopener">Resume</a> <!-- 简历按钮（把链接换成你的 PDF） -->
+      </nav> <!-- 右侧导航结束 -->
+    </div> <!-- 顶部容器结束 -->
+  </header> <!-- 顶部导航条结束 -->
+
+  <main id="app"> <!-- Vue 挂载点（不要改 id） -->
+    <router-view></router-view> <!-- 路由出口：不同页面会渲染在这里 -->
+  </main> <!-- 主体结束 -->
+
+  <footer class="site-footer"> <!-- 页脚区域 -->
+    <div class="container">© <span id="year"></span> Yeying Guo. All rights reserved.</div> <!-- 版权区（名字改这里） -->
+  </footer> <!-- 页脚结束 -->
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script> <!-- 自动显示当前年份 -->
+  <script src="./app.js"></script> <!-- 业务逻辑脚本（路径/文件名变了要同步改） -->
+</body> <!-- 页面主体结束 -->
+</html> <!-- 文档结束 -->
